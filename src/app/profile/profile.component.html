@@ -23,9 +23,9 @@
                 <div class="col-md-4">
                     <p><a href={{profile.html_url}}>View profile on github</a></p>
                     <div class="panel-body" *ngFor="let repo of repos">
-                        <p>
+                        <p class="clear-fix">
                             {{repo.name}}
-                            <a href="repo.html_url" class="btn btn-sm btn-success" target="_blank">view the project on github</a>
+                            <a href="repo.html_url" class="btn btn-sm btn-success pull-right" target="_blank">view the project on github</a>
                         </p>
                         <p>{{repo.description}}</p>
                     </div>

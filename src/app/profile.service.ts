@@ -7,12 +7,12 @@ import { environment } from '../environments/environment';
 })
 export class ProfileService {
   private username: string;
-  private access_token=environment.apiKey;
+  private access_token = environment.apiKey;
 
   constructor(private http:HttpClient) {
     console.log("service is ready");
     this.username="ClarisseU";
-    this.access_token=environment.apiKey;
+    this.access_token = environment.apiKey;
     
    }
   
@@ -21,6 +21,9 @@ export class ProfileService {
    }
    getRepo(){
     return this.http.get("https://api.github.com/users/" +this.username+"/repos?access_token"+this.access_token);
+   }
+   updateProfile(username:string){
+this.username = username;
    }
    
 }
