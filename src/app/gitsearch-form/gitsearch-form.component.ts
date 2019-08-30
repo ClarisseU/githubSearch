@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gitsearch-form.component.css']
 })
 export class GitsearchFormComponent implements OnInit {
+  
 
   constructor() { }
 
