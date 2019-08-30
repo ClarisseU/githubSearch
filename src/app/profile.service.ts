@@ -7,25 +7,23 @@ import { environment } from '../environments/environment';
 })
 export class ProfileService {
   private username: string;
-  // private access_token = environment.apiKey;
-  apiKey: string ="environment.apiKey";
-  apiUrl: string = "https://api.github.com/users/";
+  private access_token = environment.apiKey;
 
   constructor(private http:HttpClient) {
     console.log("service is ready");
     this.username="ClarisseU";
-    // this.access_token = environment.apiKey;
+    this.access_token = 'af44cfda8e93f3935e2b4122c17d093072a467d3';
     
    }
   
   getInfoProfile(){
-     return this.http.get(this.apiUrl + this.username+"?access_token=" + environment.apiKey);
+     return this.http.get("https://api.github.com/users/" +this.username+"?access_token=" +this.access_token);
    }
    getRepo(){
-    return this.http.get(this.apiUrl +this.username+"/repos?access_token=" + environment.apiKey);
+    return this.http.get("https://api.github.com/users/" +this.username+"/repos?access_token=" +this.access_token);
    }
    updateProfile(username:string){
-    return this.username = username;
+ return this.username = username;
    }
    
 }
