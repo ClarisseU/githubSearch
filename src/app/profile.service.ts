@@ -17,10 +17,10 @@ export class ProfileService {
    }
   
   getInfoProfile(){
-     return this.http.get("https://api.github.com/users/" +this.username+"?access_token="+this.access_token);
+     return this.http.get("https://api.github.com/users/" +this.username+"?access_token="+ environment.apiKey);
    }
    getRepo(){
-    return this.http.get("https://api.github.com/users/" +this.username+"/repos?access_token="+this.access_token);
+    return this.http.get("https://api.github.com/users/" +this.username+"/repos?access_token="+ environment.apiKey);
    }
    updateProfile(username:string){
     return this.username = username;
