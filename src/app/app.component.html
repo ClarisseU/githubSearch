@@ -6,7 +6,12 @@
         <div class="row">
             <p>welcome to my github search {{githubsearch}}</p>
         </div>
+        <div *ngIf="profile">
+            {{profile.name}}
+            <p>{{profile.login}}</p>
+        </div>
     </div>
     <app-gitsearch-form></app-gitsearch-form>
+    <app-profile></app-profile>
 </body>
 <router-outlet></router-outlet>

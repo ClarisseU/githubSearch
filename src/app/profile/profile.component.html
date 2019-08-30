@@ -1,3 +1,5 @@
-<p>
-  profile works!
-</p>
+<div *ngIf="profile">
+    {{profile.name}}
+    <p>{{profile.login}}</p>
+    {{profile.id}}
+</div>
