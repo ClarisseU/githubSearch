@@ -23,7 +23,7 @@ export class ProfileService {
     return this.http.get("https://api.github.com/users/" +this.username+"/repos?access_token="+this.access_token);
    }
    updateProfile(username:string){
-this.username = username;
+    return this.username = username;
    }
    
 }

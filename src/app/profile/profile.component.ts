@@ -16,10 +16,12 @@ export class ProfileComponent implements OnInit {
   }
   findProfile(){
     this.proservice.updateProfile(this.username);
+
     this.proservice.getInfoProfile().subscribe(profile=>{
       console.log(profile);
       this.profile = profile;
      });
+     
      this.proservice.getRepo().subscribe(repos=>{
        console.log(repos);
        this.repos = repos;

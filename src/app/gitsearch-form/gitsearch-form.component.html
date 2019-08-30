@@ -1,13 +1,13 @@
 <div class="container-fluid">
     <h2 class="text-center">Make your search here!</h2>
     <hr>
-    <form>
+    <form (ngsubmit)='findProfile()' #searchform="ngForm">
         <div class="form-group">
             <label>enter the user name</label>
             <input type="text" class="form-control" [(ngModel)]="username" name="username" (keyup)="findProfile()" required>
         </div>
         <div class="form-group">
-            <button class="btn btn-success" (click)='findProfile()'>Search</button>
+            <button type="submit" class="btn btn-success" (click)='findProfile()'>Search</button>
         </div>
     </form>
 </div>
